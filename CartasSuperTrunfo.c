@@ -18,11 +18,8 @@ int main() {
 
     printf("Nome da Cidade:");
     scanf("%s\n", &nome);
-
-    printf("Informe a População:");
-    scanf("%d\n", &pturistico);
-
-   // printf("Area em M²:");
+    
+    printf("Area em M²:");
     scanf("%i\n", &area);
 
    // printf("Informe o PIB:");
