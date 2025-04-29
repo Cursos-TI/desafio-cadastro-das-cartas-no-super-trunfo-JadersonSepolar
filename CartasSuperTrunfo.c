@@ -1,5 +1,5 @@
 #include <stdio.h>
-int main() {
+int main(){
     int pturistico, pturistico2;
     char  estado[30], estado2[30], cidade[30], cidade2[30], codigo[30], codigo2[30]; 
     float pib,pib2, area,area2, densidade, densidade2, percapita, percapita2;
@@ -59,7 +59,8 @@ int main() {
     //resolução dos cálculos carta 1 + super poder
     densidade = (float) (populacao / area);
     percapita = (float) (pib / populacao);
-    superpoder1 =  (float) (populacao + area + pib + pturistico + percapita - densidade); 
+    superpoder1 =  (float) (populacao + area + pib + pturistico + percapita - densidade);
+    
 
     //O usuário recebe as informações impressas da carta 01.
     printf("\n\n>>> Carta 01 <<<\n\n");
@@ -77,7 +78,7 @@ int main() {
     //resolução do cáculo da carta 2 + super poder
     densidade2 = (float) (populacao2 / area2);
     percapita2 = (float) (pib2 / populacao2);
-    superpoder2 =  (float) (populacao2 + area2 + pib2 + pturistico2 + percapita2 - densidade2); 
+    superpoder2 =  (float) (populacao2 + area2 + pib2 + pturistico2 + percapita2 - densidade2);
 
     //O usuário recebe as informações impressas da carta 02.
     printf("\n\n>>> Carta 02 <<<\n\n");
@@ -92,7 +93,7 @@ int main() {
     printf("PIB per Capita: %.5f reais\n\n", percapita2);
     printf("SUPER PODER:%f\n\n\n", superpoder2);
 
-    //comparação entres as cartas 01 e 02
+    /*//comparação entres as cartas 01 e 02
     printf(" COMPARAÇÃO ENTRE AS CARTAS\n\n");
     printf("População:%d\n", populacao > populacao2);
     printf("Área:%d\n", area > area2);
@@ -100,12 +101,21 @@ int main() {
     printf("Pontos Turísticos:%d\n", pturistico > pturistico2);
     printf("Desnidade Populacional:%d\n", densidade < densidade2);
     printf("PIB per capita:%d\n", percapita > percapita2);
-    printf("Super Poder:%d\n\n", superpoder1 > superpoder2);
+    printf("Super Poder:%d\n\n", superpoder1 > superpoder2);*/
+
+    //Lógica de comparação das cartas - atributo escolhido: População
+    if (superpoder1 > superpoder2){
+        printf("Carta 01 venceu!!!\n");
+
+        } else {
+            printf("Carta 02 venceu!!!\n\n");
+
+            }
 
 
-    printf(">>>>>> FIM <<<<<<\n\n\n\n");
+    printf(">>>>>> FIM <<<<<<\n\n");
     
 
    return 0;
 
-}
+    }
