@@ -1,117 +1,118 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 int main(){
-    int pturistico, pturistico2;
-    char  estado[30], estado2[30], cidade[30], cidade2[30], codigo[30], codigo2[30]; 
-    float pib,pib2, area,area2, densidade, densidade2, percapita, percapita2;
-    float superpoder1, superpoder2, populacao, populacao2;
+    //variáveis utilizadas.
+    int pturistico = 50, pturistico2 = 30;
+    char  pais[30], pais2[30];
+    float pib = 90.000,pib2 = 120.000, area = 30.000, area2 = 30.000, densidade, densidade2, percapita, percapita2;
+    float superpoder1, superpoder2, populacao = 600.000, populacao2 = 900.000;
+    int atributoescolhido;
 
     printf(" >>> JOGO DO SUPER TUNFO <<<\n\n");
+   
+    //Aqui, o usário insere as informações
+    printf(">> Digite o País da Carta 1 <<\n");
+    printf("Nome do País: ");
+    scanf("%s", &pais);
 
-    //Aqui, o usário insere as informações da carta 01.
-    printf(">> Insira as infromações da Carta 1 <<\n\n");
-
-    printf("Estado: ");
-    scanf("%s", &estado);
-
-    printf("Código da Cidade: ");
-    scanf("%s", &codigo);
-
-    printf("Nome da Cidade: ");
-    scanf("%s", &cidade);
+    printf("\n>> Digite o País da Carta 2 <<\n");
+    printf("Nome do País: ");
+    scanf("%s", &pais2);
     
-    printf("População: ");
-    scanf("%f", &populacao);
-
-    printf("Area em km²: ");
-    scanf("%f", &area);
-
-    printf("Informe o PIB: ");
-    scanf("%f", &pib);
-
-    printf("Quantidade de Pontos Turísticos: ");
-    scanf("%d", &pturistico);
-
-
-    //Aqui, o usário insere as informações da carta 02.
-    printf("\n\n>> Insira as infromações da Carta 2 <<\n\n");
-
-    printf("Estado: ");
-    scanf("%s" , &estado2);
-
-    printf("Código da Cidade: ");
-    scanf("%s", &codigo2);
-
-    printf("Nome da Cidade: ");
-    scanf("%s", &cidade2);
-    
-    printf("População: ");
-    scanf("%f", &populacao2);
-
-    printf("Area em km²: ");
-    scanf("%f", &area2);
-    
-    printf("Informe o PIB: ");
-    scanf("%f", &pib2);
-
-    printf("Quantidade de Pontos Turísticos: ");
-    scanf("%d", &pturistico2);
+    printf("\nEscolha um atributo abaixo: \n");
+    printf("1 - População\n");
+    printf("2 - PIB\n");
+    printf("3 - Área\n");
+    printf("4 - Densidade populacional\n");
+    printf("5 - PIB Percapita\n");
+    printf("6 - Pontos turísticos: \n");
+    printf("7 - Super poder\n\n");
+    printf("Digite o atributo: ");
+    scanf("%d", &atributoescolhido);
 
     //resolução dos cálculos carta 1 + super poder
     densidade = (float) (populacao / area);
     percapita = (float) (pib / populacao);
-    superpoder1 =  (float) (populacao + area + pib + pturistico + percapita - densidade);
-    
+    superpoder1 =  (float) (populacao + area + pib + pturistico + percapita - densidade);  
 
-    //O usuário recebe as informações impressas da carta 01.
-    printf("\n\n>>> Carta 01 <<<\n\n");
-    printf("Estado: %s\n", estado);
-    printf("Código da cidade: %s\n", codigo);
-    printf("Nome: %s\n", cidade);
-    printf("População: %.d\n", populacao);
-    printf("Área territorial: %f kM²\n", area);
-    printf("PIB: %f Bilhões de reais\n", pib);
-    printf("Pontos turísticos: %d\n", pturistico);
-    printf("Densidade Populacional: %.5f hab/km²\n", densidade);
-    printf("PIB per Capita: %.5f reais\n\n", percapita);
-    printf("SUPER PODER:%f\n", superpoder1);
-
+    //O usuário recebe as informações
+    printf("\n\nInformações da disputa\n");
+    printf("Carta 1: %s\n", pais);
+    printf("Carta 2: %s\n", pais2);
+    printf("Atributo escolhido: ", atributoescolhido);
+      
     //resolução do cáculo da carta 2 + super poder
     densidade2 = (float) (populacao2 / area2);
     percapita2 = (float) (pib2 / populacao2);
-    superpoder2 =  (float) (populacao2 + area2 + pib2 + pturistico2 + percapita2 - densidade2);
+    superpoder2 =(float) (populacao2 + area2 + pib2 + pturistico2 + percapita2 - densidade2);
 
-    //O usuário recebe as informações impressas da carta 02.
-    printf("\n\n>>> Carta 02 <<<\n\n");
-    printf("Estado: %s\n", estado2);
-    printf("Código da cidade: %s\n", codigo2);
-    printf("Nome: %s\n", cidade2);
-    printf("População: %.d\n", populacao2);
-    printf("Área territorial: %f kM²\n", area2);
-    printf("PIB: %f Bilhões de reais\n", pib2);
-    printf("Pontos turísticos: %d\n", pturistico2);
-    printf("Densidade Populacional: %.5f hab/km²\n", densidade2);
-    printf("PIB per Capita: %.5f reais\n\n", percapita2);
-    printf("SUPER PODER:%f\n\n\n", superpoder2);
+    //Atributo escolhido:  
+switch (atributoescolhido){
+    case 1:
+    printf("População\n\n");
+    break;
 
-    /*//comparação entres as cartas 01 e 02
-    printf(" COMPARAÇÃO ENTRE AS CARTAS\n\n");
-    printf("População:%d\n", populacao > populacao2);
-    printf("Área:%d\n", area > area2);
-    printf("PIB:%d\n", pib > pib2);
-    printf("Pontos Turísticos:%d\n", pturistico > pturistico2);
-    printf("Desnidade Populacional:%d\n", densidade < densidade2);
-    printf("PIB per capita:%d\n", percapita > percapita2);
-    printf("Super Poder:%d\n\n", superpoder1 > superpoder2);*/
+    case 2:
+    printf("PIB\n\n");
+    break;
 
-    //Lógica de comparação das cartas - atributo escolhido: Super poder
-    if (superpoder1 > superpoder2){
-        printf("Carta 01 venceu!!!\n");
+    case 3:
+    printf("Área\n\n");
+    break;
 
-        } else {
-            printf("Carta 02 venceu!!!\n\n");
+    case 4:
+    printf("Densidade populacional\n\n");
+    break;
 
-            }
+    case 5:
+    printf("PIB percapita\n\n");
+    break;
 
+    case 6:
+    printf("Pontos Turísticos\n\n");
+    break;
+
+default:
+    printf("Super poder\n\n");
+
+// Lógica do jogo
+} if (atributoescolhido == 1){
+    printf("%s: %f\n",pais, populacao);
+    printf("%s: %f\n\n",pais2,populacao2);
+    printf("%s é o vencedor!\n\n ",pais2);
+
+} if (atributoescolhido == 2){
+    printf("%s: %f\n",pais, pib);
+    printf("%s: %f\n\n",pais2,pib2);
+    printf("%s é o vencedor!\n\n ",pais2);
+
+} if (atributoescolhido == 3){
+    printf("%s: %f\n", pais, area);
+    printf("%s: %f\n\n",pais2, area2);
+    printf("%s e ",pais);
+    printf("%s empataram!\n\n", pais2);
+
+} if (atributoescolhido == 4){
+    printf("%s: %f\n", pais, densidade);
+    printf("%s: %f\n\n",pais2, densidade2);
+    printf("%s é o vencedor!\n\n", pais);
+
+} if (atributoescolhido == 5){
+    printf("%s: %f\n", pais, percapita);
+    printf("%s: %f\n\n",pais2, percapita2);
+    printf("%s é o vencedor!\n\n", pais);
+
+} if (atributoescolhido == 6){
+    printf("%s: %d\n", pais, pturistico);
+    printf("%s: %d\n\n",pais2, pturistico2);
+    printf("%s é o vencedor!\n\n", pais);
+
+} if (atributoescolhido == 7){
+    printf("%s: %f\n", pais, superpoder1);
+    printf("%s: %f\n\n",pais2, superpoder2);
+    printf("%s é o vencedor!\n\n", pais2);
+}
 
     printf(">>>>>> FIM <<<<<<\n\n");
     
