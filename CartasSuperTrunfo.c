@@ -103,7 +103,7 @@ int main(){
     printf("PIB per capita:%d\n", percapita > percapita2);
     printf("Super Poder:%d\n\n", superpoder1 > superpoder2);*/
 
-    //Lógica de comparação das cartas - atributo escolhido: População
+    //Lógica de comparação das cartas - atributo escolhido: Super poder
     if (superpoder1 > superpoder2){
         printf("Carta 01 venceu!!!\n");
 
