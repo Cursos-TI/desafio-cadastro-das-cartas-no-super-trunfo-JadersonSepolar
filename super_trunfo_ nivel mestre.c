@@ -46,44 +46,51 @@ printf(" >>> JOGO DO SUPER TUNFO <<<\n\n");
     //Atributo escolhido:  
 switch (atributo1){
     case 1:
-    printf("Atributo escolhido: População.\n");
-    printf("Valor do atribuito: %f\n\n", populacao);
+    printf("Atributo escolhido: População.\n\n");
+    printf("População %s: %f\n",pais, populacao); 
+    printf("População %s: %f\n\n",pais2, populacao2); 
     resultado1 = populacao > populacao2 ? 1 : 0;
     break;
 
     case 2:
-    printf("Atributo escolhido: PIB.\n");
-    printf("Valor do atribuito: %f\n\n", pib);
+    printf("Atributo escolhido: PIB.\n\n");
+    printf("PIB %s: %f\n", pais, pib); 
+    printf("PIB %s: %f\n\n", pais2, pib2);
     resultado1 = pib > pib2 ? 1 : 0;
     break;
 
     case 3:
-    printf("Atributo escolhido: Área.\n");
-    printf("Valor do atribuito: %f\n\n", area);
+    printf("Atributo escolhido: Área.\n\n");
+    printf("Área %s: %f\n", pais, area); 
+    printf("Área %s: %f\n\n", pais2, area2);
     resultado1 = area > area2 ? 1 : 0;
     break;
 
     case 4:
-    printf("Atributo escolhido: Densidade populacional.\n");
-    printf("Valor do atribuito: %f\n\n", densidade);
+    printf("Atributo escolhido: Densidade populacional.\n\n");
+    printf("Dens. populacional %s: %f\n", pais, densidade); 
+    printf("Dens. populacional %s: %f\n\n", pais2, densidade2);
     resultado1 = densidade < densidade2 ? 1 : 0;
     break;
 
     case 5:
-    printf("Atributo escolhido: PIB percapita.\n");
-    printf("Valor do atribuito: %f\n\n", percapita);
+    printf("Atributo escolhido: PIB percapita.\n\n");
+    printf("PIB per capita %s: %f\n", pais, percapita); 
+    printf("PIB per capita %s: %f\n\n", pais2, percapita2);
     resultado1 = percapita > percapita2 ? 1 : 0;
     break;
 
     case 6:
-    printf("Atributo escolhido: Pontos Turísticos.\n");
-    printf("Valor do atribuito: %d\n\n", pturistico);
+    printf("Atributo escolhido: Pontos Turísticos.\n\n");
+    printf("Pontos turísticos %s: %d\n",pais, pturistico); 
+    printf("Pontos turísticos %s: %d\n\n", pais2, pturistico2);
     resultado1 = pturistico > pturistico2 ? 1 : 0;
     break;
 
     case 7:
-    printf("Atributo escolhido: Super poder.\n");
-    printf("Valor do atribuito: %f\n\n", superpoder1);
+    printf("Atributo escolhido: Super poder.\n\n");
+    printf("Super poderes %s: %f\n", pais, superpoder1); 
+    printf("Super poderes %s: %f\n\n", pais2, superpoder2);
     resultado1 = superpoder1 > superpoder2 ? 1 : 0;
     break;
 
@@ -110,44 +117,51 @@ if (atributo1 == atributo2){
     switch (atributo2)
     {
     case 1:
-    printf("Atributo escolhido: População\n");
-    printf("Valor do atribuito: %f\n\n", populacao2);
+    printf("Atributo escolhido: População\n\n");
+    printf("População %s: %f\n", pais, populacao); 
+    printf("População %s: %f\n\n", pais2, populacao2);
     resultado2 = populacao > populacao2 ? 1 : 0;
     break;
 
     case 2:
-    printf("Atributo escolhido: PIB\n");
-    printf("Valor do atribuito: %f\n\n", pib2);
+    printf("Atributo escolhido: PIB\n\n");
+    printf("PIB %s: %f\n", pais, pib); 
+    printf("PIB %s: %f\n\n", pais2, pib2);
     resultado2 = pib > pib2 ? 1 : 0;
     break;
 
     case 3:
-    printf("Atributo escolhido: Área\n");
-    printf("Valor do atribuito: %f\n\n", area2);
+    printf("Atributo escolhido: Área\n\n");
+    printf("Área %s: %f\n", pais, area); 
+    printf("Área %s: %f\n\n", pais2, area2);
     resultado2 = area > area2 ? 1 : 0;
     break;
 
     case 4:
-    printf("Atributo escolhido: Densidade populacional\n");
-    printf("Valor do atribuito: %f\n\n", densidade2);
+    printf("Atributo escolhido: Densidade populacional\n\n");
+    printf("Dens. populacional %s: %f\n", pais, densidade); 
+    printf("Dens. populacional %s: %f\n\n", pais2, densidade2);
     resultado2 = densidade < densidade2 ? 1 : 0;
     break;
 
     case 5:
-    printf("Atributo escolhido: PIB percapita\n");
-    printf("Valor do atribuito: %f\n\n", percapita2);
+    printf("Atributo escolhido: PIB percapita\n\n");
+    printf("PIB per capita %s: %f\n", pais, percapita); 
+    printf("PIB per capita %s: %f\n\n", pais2, percapita2);
     resultado2 = percapita > percapita2 ? 1 : 0;
     break;
 
     case 6:
-    printf("Atributo escolhido: Pontos Turísticos\n");
-    printf("Valor do atribuito: %i\n\n", pturistico2);
+    printf("Atributo escolhido: Pontos Turísticos\n\n");
+    printf("Pontos turísticos %s: %d\n", pais, pturistico); 
+    printf("Pontos turísticos %s: %d\n\n", pais2, pturistico2);
     resultado2 = pturistico > pturistico2 ? 1 : 0;
     break;
 
     case 7:
     printf("Atributo escolhido: Super poder\n\n");
-    printf("Valor do atribuito: %f\n\n", superpoder2);
+    printf("Super poderes %s: %f\n", pais, pib); 
+    printf("super poderes %s: %f\n\n", pais2, pib2);
     resultado2 = superpoder1 > superpoder2 ? 1 : 0;
     break;
 
